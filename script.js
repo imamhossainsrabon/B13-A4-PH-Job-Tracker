@@ -107,7 +107,13 @@ mainContainer.addEventListener('click', function (event) {
         }
         rejectedList = rejectedList.filter(item => item.companyName != cardInfo.companyName)
 
-        renderRejected()
+        if (currentStatus == 'interview-filter-btn') {
+            renderInterview()
+        }
+        else if (currentStatus == 'rejected-filter-btn') {
+            renderRejected()
+        }
+
         calculateCount()
 
 
@@ -144,10 +150,14 @@ mainContainer.addEventListener('click', function (event) {
         }
         interviewList = interviewList.filter(item => item.companyName != cardInfo.companyName)
 
-        renderInterview()
+        if (currentStatus == 'interview-filter-btn') {
+            renderInterview()
+        }
+        else if (currentStatus == 'rejected-filter-btn') {
+            renderRejected()
+        }
+
         calculateCount()
-
-
 
 
     } else if (event.target.closest('.delete')) {
@@ -169,19 +179,33 @@ mainContainer.addEventListener('click', function (event) {
         rejectedList = rejectedList.filter(item => item.companyName !== companyName)
 
 
-        calculateCount()
-
         if (currentStatus == 'interview-filter-btn') {
             renderInterview()
         }
         else if (currentStatus == 'rejected-filter-btn') {
             renderRejected()
         }
+
+        calculateCount()
     }
 })
 
 function renderInterview() {
-    filteredSection.innerHTML = ''
+    filteredSection.innerHTML = '';
+
+    // 2) যদি লিস্ট খালি হয়, শুধু "No jobs" দেখাও
+    if (interviewList.length === 0) {
+        filteredSection.innerHTML = `
+      <section id="No-jobs-available">
+        <div class="container">
+          <img src="./images/No_docs.png" alt="">
+          <h3>No jobs available</h3>
+          <p>Check back soon for new job opportunities</p>
+        </div>
+      </section>
+    `;
+        return;
+    }
 
     for (let interview of interviewList) {
         let div = document.createElement('div')
@@ -211,7 +235,21 @@ function renderInterview() {
     }
 }
 function renderRejected() {
-    filteredSection.innerHTML = ''
+    filteredSection.innerHTML = '';
+
+    // 2) যদি লিস্ট খালি হয়, শুধু "No jobs" দেখাও
+    if (rejectedList.length === 0) {
+        filteredSection.innerHTML = `
+      <section id="No-jobs-available">
+        <div class="container">
+          <img src="./images/No_docs.png" alt="">
+          <h3>No jobs available</h3>
+          <p>Check back soon for new job opportunities</p>
+        </div>
+      </section>
+    `;
+        return;
+    }
 
     for (let rejected of rejectedList) {
         let div = document.createElement('div')

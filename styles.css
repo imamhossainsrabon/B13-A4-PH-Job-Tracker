@@ -245,4 +245,40 @@ main {
     border-radius: 6px;
 }
 
+
+/* No jobs Available SEction */
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #E6E7E9;
+}
+
+.container img {
+    max-width: 70px;
+    max-height: 90px;
+    margin-bottom: 20px;
+}
+
+.container h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    color: #002C5C;
+    margin-bottom: 4px;
+}
+
+.container p {
+    font-size: 16px;
+    line-height: 120%;
+    color: #64748B;
+}
+
 /* Main Section  */
