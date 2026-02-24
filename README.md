@@ -40,3 +40,8 @@ When we click on a child element (for example, a button inside a div), the event
 
 
 5. What is the difference between preventDefault() and stopPropagation() methods?
+
+
+preventDefault() disables the default behavior of an element. The browser will no longer do what it normally would.
+
+stopPropagation() stops the propagation (bubbling or spreading upwards) of the event. The event will no longer reach its parent or any element above it.
