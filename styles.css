@@ -70,6 +70,159 @@ header h1 {
 /* Header Section */
 hr {
     max-width: 1110px;
-    margin: 0 auto;
+    margin: 30px auto;
     border: 1px solid #E6E7E9;
 }
+
+
+/* Main Section  */
+main {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.available {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.available>p {
+    color: #002C5C;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.job {
+    display: flex;
+    gap: 8px;
+    color: #64748B;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.btn-div {
+    max-width: 260px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+
+
+}
+
+.btn-div button {
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 100%;
+    border: none;
+    width: 80px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+.active {
+    background-color: #3B82F6;
+    color: #fff;
+}
+
+.normal {
+    background-color: #fff;
+    color: #64748B;
+    border: 1px solid #F1F2F4 !important;
+}
+
+/* Card Section */
+.card {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #F1F2F4 !important;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.first_col {}
+
+.companyName {
+    color: #002C5C;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.designNation {
+    color: #64748B;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.time {
+    color: #64748B;
+    font-size: 14px;
+    margin: 20px 0px;
+    line-height: 145%;
+}
+
+.status {
+    background-color: #EEF4FF;
+    width: max-content;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 125%;
+    margin-bottom: 8px;
+}
+
+.subHeading {
+    color: #323B49;
+    font-size: 14px;
+    line-height: 145%;
+    margin-bottom: 20px;
+}
+
+.interview-btn {
+    background-color: #fff;
+    color: #10B981;
+    width: max-content;
+    padding: 8px 12px;
+    border-radius: 4px;
+    outline: 1px solid #10B981;
+    border: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 125%;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+.rejected-btn {
+    background-color: #fff;
+    color: #ff0000;
+    width: max-content;
+    padding: 8px 12px;
+    border-radius: 4px;
+    outline: 1px solid #ff0000;
+    border: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 125%;
+    margin-bottom: 8px;
+}
+
+.delete img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Card Section */
+
+/* Main Section  */
