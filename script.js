@@ -192,8 +192,7 @@ mainContainer.addEventListener('click', function (event) {
 
 function renderInterview() {
     filteredSection.innerHTML = '';
-
-    // 2) যদি লিস্ট খালি হয়, শুধু "No jobs" দেখাও
+    
     if (interviewList.length === 0) {
         filteredSection.innerHTML = `
       <section id="No-jobs-available">
@@ -236,8 +235,7 @@ function renderInterview() {
 }
 function renderRejected() {
     filteredSection.innerHTML = '';
-
-    // 2) যদি লিস্ট খালি হয়, শুধু "No jobs" দেখাও
+    
     if (rejectedList.length === 0) {
         filteredSection.innerHTML = `
       <section id="No-jobs-available">
